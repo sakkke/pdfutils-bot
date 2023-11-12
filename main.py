@@ -84,4 +84,6 @@ async def pdfmerge(ctx, a: discord.Option(description='Formatted 1'), b: discord
                         await ctx.respond(f'```/pdfmerge {a} {b}\n```')
                         await channel.send(file=file, silent=True)
 
+                        print('OK')
+
 bot.run(os.getenv('TOKEN'))
