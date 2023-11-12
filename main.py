@@ -23,6 +23,8 @@ async def hello(ctx):
 
 @bot.slash_command(name = "pdfmerge", description = "Merge two PDFs")
 async def pdfmerge(ctx, a: discord.Option(description='Formatted 1'), b: discord.Option(description='Formatted 2')):
+    await ctx.defer()
+
     a_splitted = a.split(':')
     a_message_id = int(a_splitted[0])
     a_attachment_index = int(a_splitted[1])
